@@ -1,0 +1,14 @@
+app\RegisterDialog.class
+persistence\FileStorage.class
+app\Main.class
+model\Musica.class
+repository\UsuarioRepository.class
+app\MusicaTableModel.class
+model\Usuario.class
+app\LoginDialog.class
+repository\BibliotecaMusical.class
+app\MusicaPopupListener.class
+app\AddMusicaDialog.class
+org\assertj\swing\core\ComponentIndex.class
+app\EditMusicaDialog.class
+app\MainView.class

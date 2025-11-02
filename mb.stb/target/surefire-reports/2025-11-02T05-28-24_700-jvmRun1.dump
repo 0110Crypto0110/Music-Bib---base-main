@@ -1,0 +1,237 @@
+# Created at 2025-11-02T05:29:38.535
+Exiting self fork JVM. Received SHUTDOWN command from Maven shutdown hook.
+Thread dump before exiting the process (11008@DESKTOP-UMOPI1M):
+"main" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@21.0.7/java.lang.ClassLoader.findBootstrapClass(Native Method)
+        at java.base@21.0.7/java.lang.ClassLoader.findBootstrapClassOrNull(ClassLoader.java:1277)
+        at java.base@21.0.7/java.lang.System$2.findBootstrapClassOrNull(System.java:2397)
+        at java.base@21.0.7/jdk.internal.loader.ClassLoaders$BootClassLoader.loadClassOrNull(ClassLoaders.java:140)
+        at java.base@21.0.7/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:700)
+        at java.base@21.0.7/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:676)
+        at java.base@21.0.7/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:700)
+        at java.base@21.0.7/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:676)
+        at java.base@21.0.7/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
+        at java.base@21.0.7/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+        at java.base@21.0.7/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+        at app//org.mockito.internal.stubbing.defaultanswers.ReturnsMoreEmptyValues.<init>(ReturnsMoreEmptyValues.java:50)
+        at app//org.mockito.internal.stubbing.defaultanswers.ReturnsSmartNulls.<init>(ReturnsSmartNulls.java:46)
+        at app//org.mockito.Answers.<clinit>(Answers.java:44)
+        at java.base@21.0.7/jdk.internal.misc.Unsafe.ensureClassInitialized0(Native Method)
+        at java.base@21.0.7/jdk.internal.misc.Unsafe.ensureClassInitialized(Unsafe.java:1160)
+        at java.base@21.0.7/jdk.internal.reflect.MethodHandleAccessorFactory.ensureClassInitialized(MethodHandleAccessorFactory.java:300)
+        at java.base@21.0.7/jdk.internal.reflect.MethodHandleAccessorFactory.newMethodAccessor(MethodHandleAccessorFactory.java:71)
+        at java.base@21.0.7/jdk.internal.reflect.ReflectionFactory.newMethodAccessor(ReflectionFactory.java:159)
+        at java.base@21.0.7/java.lang.reflect.Method.acquireMethodAccessor(Method.java:726)
+        at java.base@21.0.7/java.lang.reflect.Method.invoke(Method.java:577)
+        at java.base@21.0.7/java.lang.Class.getEnumConstantsShared(Class.java:4014)
+        at java.base@21.0.7/java.lang.Class.enumConstantDirectory(Class.java:4037)
+        at java.base@21.0.7/java.lang.Enum.valueOf(Enum.java:287)
+        at java.base@21.0.7/sun.reflect.annotation.AnnotationParser.parseEnumValue(AnnotationParser.java:479)
+        at java.base@21.0.7/sun.reflect.annotation.AnnotationParser.parseMemberValue(AnnotationParser.java:345)
+        at java.base@21.0.7/java.lang.reflect.Method.getDefaultValue(Method.java:772)
+        at java.base@21.0.7/sun.reflect.annotation.AnnotationType.<init>(AnnotationType.java:133)
+        at java.base@21.0.7/sun.reflect.annotation.AnnotationType.getInstance(AnnotationType.java:85)
+        at java.base@21.0.7/sun.reflect.annotation.AnnotationParser.parseAnnotation2(AnnotationParser.java:262)
+        at java.base@21.0.7/sun.reflect.annotation.AnnotationParser.parseAnnotations2(AnnotationParser.java:121)
+        at java.base@21.0.7/sun.reflect.annotation.AnnotationParser.parseAnnotations(AnnotationParser.java:73)
+        at java.base@21.0.7/java.lang.reflect.Field.declaredAnnotations(Field.java:1281)
+        at java.base@21.0.7/java.lang.reflect.Field.declaredAnnotations(Field.java:1279)
+        at java.base@21.0.7/java.lang.reflect.Field.getAnnotation(Field.java:1246)
+        at java.base@21.0.7/java.lang.reflect.AccessibleObject.getDeclaredAnnotation(AccessibleObject.java:606)
+        at app//org.junit.platform.commons.util.AnnotationUtils.findAnnotation(AnnotationUtils.java:150)
+        at app//org.junit.platform.commons.util.AnnotationUtils.findAnnotation(AnnotationUtils.java:137)
+        at app//org.junit.platform.commons.util.AnnotationUtils.isAnnotated(AnnotationUtils.java:105)
+        at app//org.junit.platform.commons.util.AnnotationUtils.lambda$findAnnotatedFields$6(AnnotationUtils.java:485)
+        at app//org.junit.platform.commons.util.AnnotationUtils$$Lambda/0x000002b4100bbcc8.test(Unknown Source)
+        at java.base@21.0.7/java.util.function.Predicate.lambda$and$0(Predicate.java:69)
+        at java.base@21.0.7/java.util.function.Predicate$$Lambda/0x000002b410069e78.test(Unknown Source)
+        at java.base@21.0.7/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
+        at java.base@21.0.7/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+        at java.base@21.0.7/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+        at java.base@21.0.7/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+        at java.base@21.0.7/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+        at java.base@21.0.7/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+        at java.base@21.0.7/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+        at app//org.junit.platform.commons.util.ReflectionUtils.toSortedMutableList(ReflectionUtils.java:1616)
+        at app//org.junit.platform.commons.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:1546)
+        at app//org.junit.platform.commons.util.ReflectionUtils.findAllFieldsInHierarchy(ReflectionUtils.java:1266)
+        at app//org.junit.platform.commons.util.ReflectionUtils.streamFields(ReflectionUtils.java:1256)
+        at app//org.junit.platform.commons.util.ReflectionUtils.findFields(ReflectionUtils.java:1242)
+        at app//org.junit.platform.commons.util.AnnotationUtils.findAnnotatedFields(AnnotationUtils.java:487)
+        at app//org.junit.platform.commons.util.AnnotationUtils.findAnnotatedFields(AnnotationUtils.java:464)
+        at app//org.junit.jupiter.engine.extension.TempDirectory.injectFields(TempDirectory.java:139)
+        at app//org.junit.jupiter.engine.extension.TempDirectory.injectStaticFields(TempDirectory.java:127)
+        at app//org.junit.jupiter.engine.extension.TempDirectory.beforeAll(TempDirectory.java:102)
+        at app//org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeBeforeAllCallbacks$12(ClassBasedTestDescriptor.java:396)
+        at app//org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor$$Lambda/0x000002b4100b8778.execute(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at app//org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeBeforeAllCallbacks(ClassBasedTestDescriptor.java:396)
+        at app//org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.before(ClassBasedTestDescriptor.java:212)
+        at app//org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.before(ClassBasedTestDescriptor.java:85)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:148)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda/0x000002b4100af0e8.execute(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda/0x000002b4100aeed0.invoke(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda/0x000002b4100aeac8.execute(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+        at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService$$Lambda/0x000002b4100afbb0.accept(Unknown Source)
+        at java.base@21.0.7/java.util.ArrayList.forEach(ArrayList.java:1596)
+        at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda/0x000002b4100af0e8.execute(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda/0x000002b4100aeed0.invoke(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask$$Lambda/0x000002b4100aeac8.execute(Unknown Source)
+        at app//org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+        at app//org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+        at app//org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+        at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+        at app//org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+        at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+        at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+        at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+        at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+        at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator$$Lambda/0x000002b410099068.accept(Unknown Source)
+        at app//org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+
+"Reference Handler" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@21.0.7/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+        at java.base@21.0.7/java.lang.ref.Reference.processPendingReferences(Reference.java:246)
+        at java.base@21.0.7/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:208)
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.7/java.lang.Object.wait0(Native Method)
+        at java.base@21.0.7/java.lang.Object.wait(Object.java:366)
+        at java.base@21.0.7/java.lang.Object.wait(Object.java:339)
+        at java.base@21.0.7/java.lang.ref.NativeReferenceQueue.await(NativeReferenceQueue.java:48)
+        at java.base@21.0.7/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:158)
+        at java.base@21.0.7/java.lang.ref.NativeReferenceQueue.remove(NativeReferenceQueue.java:89)
+        at java.base@21.0.7/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:173)
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" 
+   java.lang.Thread.State: RUNNABLE
+
+"Notification Thread" 
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@21.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.7/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@21.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1852)
+        at java.base@21.0.7/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+        at java.base@21.0.7/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+        at java.base@21.0.7/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+        at java.base@21.0.7/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+        at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.7/java.lang.Thread.run(Thread.java:1583)
+        at java.base@21.0.7/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:186)
+
+"surefire-forkedjvm-stream-flusher" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@21.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.7/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+        at java.base@21.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+        at java.base@21.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+        at java.base@21.0.7/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+        at java.base@21.0.7/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+        at java.base@21.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+        at java.base@21.0.7/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.7/java.lang.Thread.run(Thread.java:1583)
+
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: RUNNABLE
+        at java.management@21.0.7/sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at java.management@21.0.7/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:187)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:579)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.access$600(ForkedBooter.java:79)
+        at app//org.apache.maven.surefire.booter.ForkedBooter$4.update(ForkedBooter.java:315)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.callListeners(CommandReader.java:357)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.exitByConfiguration(CommandReader.java:367)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:330)
+        at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.7/java.lang.Thread.run(Thread.java:1583)
+
+"Java2D Disposer" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.7/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@21.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+        at java.base@21.0.7/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+        at java.base@21.0.7/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+        at java.base@21.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+        at java.base@21.0.7/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:67)
+        at java.base@21.0.7/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:158)
+        at java.base@21.0.7/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:234)
+        at java.desktop@21.0.7/sun.java2d.Disposer.run(Disposer.java:145)
+        at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.7/java.lang.Thread.run(Thread.java:1583)
+
+"AWT-Windows" 
+   java.lang.Thread.State: RUNNABLE
+        at java.desktop@21.0.7/sun.awt.windows.WToolkit.eventLoop(Native Method)
+        at java.desktop@21.0.7/sun.awt.windows.WToolkit.run(WToolkit.java:360)
+        at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.7/java.lang.Thread.run(Thread.java:1583)
+
+"D3D Screen Updater" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.7/java.lang.Object.wait0(Native Method)
+        at java.base@21.0.7/java.lang.Object.wait(Object.java:366)
+        at java.desktop@21.0.7/sun.java2d.d3d.D3DScreenUpdateManager.run(D3DScreenUpdateManager.java:425)
+        at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.7/java.lang.Thread.run(Thread.java:1583)
+
+"Window Ready Timer" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.7/java.lang.Object.wait0(Native Method)
+        at java.base@21.0.7/java.lang.Object.wait(Object.java:366)
+        at java.base@21.0.7/java.lang.Object.wait(Object.java:339)
+        at java.base@21.0.7/java.util.TimerThread.mainLoop(Timer.java:537)
+        at java.base@21.0.7/java.util.TimerThread.run(Timer.java:516)
+
+"TimerQueue" 
+   java.lang.Thread.State: WAITING
+        at java.base@21.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.7/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+        at java.base@21.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+        at java.base@21.0.7/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+        at java.base@21.0.7/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+        at java.base@21.0.7/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1712)
+        at java.base@21.0.7/java.util.concurrent.DelayQueue.take(DelayQueue.java:242)
+        at java.desktop@21.0.7/javax.swing.TimerQueue.run(TimerQueue.java:165)
+        at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.7/java.lang.Thread.run(Thread.java:1583)
+
+"pool-2-thread-1" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@21.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+        at java.base@21.0.7/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:410)
+        at java.base@21.0.7/java.util.concurrent.LinkedTransferQueue$DualNode.await(LinkedTransferQueue.java:452)
+        at java.base@21.0.7/java.util.concurrent.SynchronousQueue$Transferer.xferLifo(SynchronousQueue.java:194)
+        at java.base@21.0.7/java.util.concurrent.SynchronousQueue.xfer(SynchronousQueue.java:235)
+        at java.base@21.0.7/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:338)
+        at java.base@21.0.7/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1069)
+        at java.base@21.0.7/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+        at java.base@21.0.7/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+        at java.base@21.0.7/java.lang.Thread.run(Thread.java:1583)
+
+
+
