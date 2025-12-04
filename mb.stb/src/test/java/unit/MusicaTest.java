@@ -1,6 +1,7 @@
 
 package unit;
 import java.util.UUID;
+import exception.RegraNegocioException;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -79,18 +80,18 @@ class MusicaTest {
     @Test
     void deveLancarExcecaoSeTituloForVazioOuNulo() {
         assertAll(
-            () -> assertThrows(IllegalArgumentException.class, () -> musica.setTitulo("")),
-            () -> assertThrows(IllegalArgumentException.class, () -> musica.setTitulo("  ")),
-            () -> assertThrows(IllegalArgumentException.class, () -> musica.setTitulo(null))
+            () -> assertThrows(RegraNegocioException.class, () -> musica.setTitulo("")),
+            () -> assertThrows(RegraNegocioException.class, () -> musica.setTitulo("  ")),
+            () -> assertThrows(RegraNegocioException.class, () -> musica.setTitulo(null))
         );
     }
 
     @Test
     void deveLancarExcecaoSeArtistaForVazioOuNulo() {
         assertAll(
-            () -> assertThrows(IllegalArgumentException.class, () -> musica.setArtista("")),
-            () -> assertThrows(IllegalArgumentException.class, () -> musica.setArtista("   ")),
-            () -> assertThrows(IllegalArgumentException.class, () -> musica.setArtista(null))
+            () -> assertThrows(RegraNegocioException.class, () -> musica.setArtista("")),
+            () -> assertThrows(RegraNegocioException.class, () -> musica.setArtista("   ")),
+            () -> assertThrows(RegraNegocioException.class, () -> musica.setArtista(null))
         );
     }
 
@@ -105,8 +106,8 @@ class MusicaTest {
     @Test
     void deveLancarExcecaoSeDuracaoForMenorOuIgualAZero() {
         assertAll(
-            () -> assertThrows(IllegalArgumentException.class, () -> musica.setDuracaoSegundos(0)),
-            () -> assertThrows(IllegalArgumentException.class, () -> musica.setDuracaoSegundos(-5))
+            () -> assertThrows(RegraNegocioException.class, () -> musica.setDuracaoSegundos(0)),
+            () -> assertThrows(RegraNegocioException.class, () -> musica.setDuracaoSegundos(-5))
         );
     }
 

@@ -1,5 +1,7 @@
 package unit;
 
+import exception.RegraNegocioException;
+
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -40,9 +42,9 @@ class UsuarioTest {
     @Test
     void deveLancarExcecaoSeEmailForNuloOuVazio() {
         assertAll(
-            () -> assertThrows(IllegalArgumentException.class, () -> new Usuario("A", "", "1234")),
-            () -> assertThrows(IllegalArgumentException.class, () -> new Usuario("A", "   ", "1234")),
-            () -> assertThrows(IllegalArgumentException.class, () -> new Usuario("A", null, "1234"))
+            () -> assertThrows(RegraNegocioException.class, () -> new Usuario("A", "", "1234")),
+            () -> assertThrows(RegraNegocioException.class, () -> new Usuario("A", "   ", "1234")),
+            () -> assertThrows(RegraNegocioException.class, () -> new Usuario("A", null, "1234"))
         );
     }
 
@@ -65,9 +67,9 @@ class UsuarioTest {
     @Test
     void deveLancarExcecaoSeNomeForNuloOuVazio() {
         assertAll(
-            () -> assertThrows(IllegalArgumentException.class, () -> usuario.setNome("")),
-            () -> assertThrows(IllegalArgumentException.class, () -> usuario.setNome("   ")),
-            () -> assertThrows(IllegalArgumentException.class, () -> usuario.setNome(null))
+            () -> assertThrows(RegraNegocioException.class, () -> usuario.setNome("")),
+            () -> assertThrows(RegraNegocioException.class, () -> usuario.setNome("   ")),
+            () -> assertThrows(RegraNegocioException.class, () -> usuario.setNome(null))
         );
     }
 
@@ -84,9 +86,9 @@ class UsuarioTest {
     @Test
     void deveLancarExcecaoSeSenhaForCurtaOuNula() {
         assertAll(
-            () -> assertThrows(IllegalArgumentException.class, () -> usuario.setSenha("")),
-            () -> assertThrows(IllegalArgumentException.class, () -> usuario.setSenha("abc")),
-            () -> assertThrows(IllegalArgumentException.class, () -> usuario.setSenha(null))
+            () -> assertThrows(RegraNegocioException.class, () -> usuario.setSenha("")),
+            () -> assertThrows(RegraNegocioException.class, () -> usuario.setSenha("abc")),
+            () -> assertThrows(RegraNegocioException.class, () -> usuario.setSenha(null))
         );
     }
 

@@ -2,6 +2,8 @@ package model;
 
 import java.util.UUID;
 
+import exception.RegraNegocioException;
+
 /**
  * Representa uma música dentro da biblioteca.
  * Todos os atributos são privados e acessados via getters/setters.
@@ -36,14 +38,14 @@ public class Musica {
     public String getTitulo() { return titulo; }
     public void setTitulo(String titulo) {
         if (titulo == null || titulo.isBlank())
-            throw new IllegalArgumentException("Título não pode ser vazio.");
+            throw new RegraNegocioException("Título não pode ser vazio.");
         this.titulo = titulo.trim();
     }
 
     public String getArtista() { return artista; }
     public void setArtista(String artista) {
         if (artista == null || artista.isBlank())
-            throw new IllegalArgumentException("Artista não pode ser vazio.");
+            throw new RegraNegocioException("Artista não pode ser vazio.");
         this.artista = artista.trim();
     }
 
@@ -60,7 +62,7 @@ public class Musica {
     public int getDuracaoSegundos() { return duracaoSegundos; }
     public void setDuracaoSegundos(int duracaoSegundos) {
         if (duracaoSegundos <= 0)
-            throw new IllegalArgumentException("Duração deve ser maior que zero.");
+            throw new RegraNegocioException("Duração deve ser maior que zero.");
         this.duracaoSegundos = duracaoSegundos;
     }
 

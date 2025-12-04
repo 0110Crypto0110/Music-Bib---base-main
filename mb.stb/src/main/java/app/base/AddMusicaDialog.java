@@ -1,5 +1,6 @@
 package app.base;
 
+import exception.RegraNegocioException;
 import model.Musica;
 import repository.BibliotecaMusical;
 
@@ -117,9 +118,12 @@ public class AddMusicaDialog extends BaseDialog {
                 showMessage("Falha ao adicionar: Já existe uma música idêntica cadastrada.",
                         "Erro", JOptionPane.ERROR_MESSAGE);
             }
-        } catch (IllegalArgumentException ex) {
+        } catch (RegraNegocioException ex) {
             showMessage("Erro: " + ex.getMessage(),
                     "Erro de Dados", JOptionPane.ERROR_MESSAGE);
+        } catch (Exception ex) {
+             showMessage("Erro inesperado: " + ex.getMessage(),
+                    "Erro", JOptionPane.ERROR_MESSAGE);
         }
     }
 }
